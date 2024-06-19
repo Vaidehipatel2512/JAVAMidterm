@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.example.fx200575777.HelloController">
+    <!-- Top section with PatientID and Search button -->
+    <top>
+        <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+            <Label text="PatientID" />
+            <TextField fx:id="patientIdField" />
+            <Button text="Search" fx:id="searchButton" />
+        </HBox>
+    </top>
+
+    <!-- Center section with TableView and form inputs -->
+    <center>
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 10;">
+            <TableView fx:id="tableView" prefHeight="100">
+                <columns>
+                    <TableColumn text="Patient ID" fx:id="colPatientId" />
+                    <TableColumn text="Symptoms" fx:id="colSymptoms" />
+                    <TableColumn text="Diagnosis" fx:id="colDiagnosis" />
+                    <TableColumn text="Medicines" fx:id="colMedicines" />
+                </columns>
+            </TableView>
+            <GridPane hgap="10" vgap="10" alignment="CENTER">
+                <Label text="Symptoms" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="symptomsField" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                <Label text="Diagnosis" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <TextField fx:id="diagnosisField" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                <Label text="Medicines" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <TextField fx:id="medicinesField" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                <Label text="Ward Required?" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                <CheckBox text="Yes" fx:id="wardRequiredCheckBox" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+            </GridPane>
+        </VBox>
+    </center>
+
+    <!-- Bottom section with Save and Close buttons -->
+    <bottom>
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 10;">
+            <Label text="Vaidehi Patel - 200575777" alignment="CENTER"/>
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="Add" fx:id="addButton" />
+                <Button text="Close" fx:id="closeButton" />
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
